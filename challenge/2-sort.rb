@@ -11,7 +11,7 @@ ARGV.each do |arg|
 
   i_arg = arg.to_i
 
-  # insert at the right position (insertion sort)
+  # insertion sort
   is_inserted = false
   i = 0
   l = result.size
@@ -19,11 +19,13 @@ ARGV.each do |arg|
     if result[i] < i_arg
       i += 1
     else
-      result.insert(i, i_arg)   # ojo: i, no i - 1
+      result.insert(i, i_arg)   # <- sin "- 1"
       is_inserted = true
     end
   end
+
   result << i_arg unless is_inserted
 end
 
-puts result   # un valor por línea
+# un número por línea (lo que pide el tester)
+puts result
