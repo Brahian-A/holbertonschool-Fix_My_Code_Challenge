@@ -19,7 +19,7 @@ ARGV.each do |arg|
     if result[i] < i_arg
       i += 1
     else
-      result.insert(i, i_arg)   # <- sin "- 1"
+      result.insert(i, i_arg)   # <- correcto (sin - 1)
       is_inserted = true
     end
   end
@@ -27,5 +27,5 @@ ARGV.each do |arg|
   result << i_arg unless is_inserted
 end
 
-# un número por línea (lo que pide el tester)
+# un número por línea
 puts result
